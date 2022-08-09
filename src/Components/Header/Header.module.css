@@ -11,17 +11,58 @@
   margin: 0px;
 }
 
+.whiteTitle {
+  color: white;
+}
+
+.blackTitle {
+  color: black;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.themeSwitcher {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.lightSwitcher {
+  background: black;
+  border: 2px solid black;
+}
+
+.darkSwitcher {
+  background: white;
+  border: 2px solid white;
+}
+
 .login {
   cursor: pointer;
   padding: 0px;
   margin: 0px;
   display: block;
-  background: white;
   width: 8px;
   height: 8px;
-  border: 2px solid;
   box-sizing: border-box;
   border-radius: 50%;
+}
+
+.lightLogin {
+  background: white;
+  border: 2px solid black;
+}
+
+.darkLogin {
+  background: black;
+  border: 2px solid white;
 }
 
 .login.loading {

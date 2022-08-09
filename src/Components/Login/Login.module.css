@@ -1,13 +1,21 @@
 .label,
 .input,
 .button {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
 
 .label {
   display: block;
   margin-bottom: 0.25rem;
+}
+
+.whiteLabel {
+  color: white;
+}
+
+.blackLabel {
+  color: black;
 }
 
 .input {
@@ -21,11 +29,19 @@
 }
 
 .button {
-  color: white;
-  background: black;
   border: none;
   padding: 0.7rem 2rem;
   margin-top: 0.5rem;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.lightButton {
+  color: white;
+  background: black;
+}
+
+.darkButton {
+  color: black;
+  background: white;
 }

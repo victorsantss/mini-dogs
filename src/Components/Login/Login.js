@@ -1,11 +1,12 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/login';
 import styles from './Login.module.css';
 
 export const Login = () => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const darkTheme = useSelector(state => state.theme.darkTheme);
   const dispatch = useDispatch();
 
   function handleSubmit(event) {
@@ -16,7 +17,11 @@ export const Login = () => {
 
   return (
     <form className="anime" onSubmit={handleSubmit}>
-      <label className={styles.label} htmlFor="username">
+      <label
+        className={`
+          ${darkTheme ? styles.whiteLabel : styles.blackLabel} 
+          ${styles.label}`}
+        htmlFor="username">
         User
       </label>
       <input
@@ -26,7 +31,11 @@ export const Login = () => {
         value={username}
         onChange={({ target }) => setUsername(target.value)}
       />
-      <label className={styles.label} htmlFor="password">
+      <label
+        className={`
+          ${darkTheme ? styles.whiteLabel : styles.blackLabel} 
+          ${styles.label}`}
+        htmlFor="password">
         Password
       </label>
       <input
@@ -36,7 +45,13 @@ export const Login = () => {
         value={password}
         onChange={({ target }) => setPassword(target.value)}
       />
-      <button className={styles.button}>Submit</button>
+      <button
+        className={`
+          ${darkTheme ? styles.darkButton : styles.lightButton} 
+          ${styles.button}`}
+      >
+        Submit
+      </button>
     </form>
   )
 }
